@@ -1,2 +1,88 @@
-<h1>Myvote#index</h1>
-<p>Find me in app/views/myvote/index.html.erb</p>
+<!-- This is written as a basic single page app to avoid 
+page reloads which would interfere with the video stream -->
+
+<!-- Using Twitter Bootstrap to make the the page responsive to mobile devices.. -->
+
+<!-- Bootstrap navigation bar -->
+<div class="navbar navbar-fixed-top navbar-inverse">
+	<div class="navbar-inner">
+		<div class="container">
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+			<!-- Site Title in Navbar -->
+			<a class="brand" href="/">myVote</a>
+			<div class="nav-collapse">
+				<ul class="nav pull-right">
+					<li><%= link_to "Find your MP", "http://www.theyworkforyou.com/mps", :target => "_blank" %></li>
+					<li><%= link_to "About mySociety", "http://www.mysociety.org/about" %></li>
+					<li><%= link_to "Contact Us", "http://www.mysociety.org/contact" %></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Main (fixed) Bootstrap 12-column layout for page -->
+<div class="container">
+	<div class="row">
+		<div class="span8">
+			<!-- Container for video stream (YouTube clip just as an example) -->
+			<div id="videoStream" class="panel">
+				<h2>Live Election Coverage</h2>
+				<div class="video-container">
+					<iframe src="http://www.youtube.com/embed/AH3a1gBHfSA?autoplay=1&autohide=1&showinfo=0&rel=0" frameborder="0" width="560" height="315"></iframe>
+				</div>
+			</div>
+
+			<!-- Question - are you going to vote? -->
+			<div id="vote" class="panel">
+				<span>Are you going to vote?</span>
+				<a id="voteYes" class="btn btn-success">Yes</a>
+				<a id="voteNo" class="btn btn-danger">No</a>
+			</div>
+
+			<!-- Postcode prompt to find constituency, initially hidden -->
+			<div id="postcodeLookup" class="panel hidden">
+				<input id="postcode" type="text" placeholder="enter postcode to find constituency">
+				<a id="postcodeFind" class="btn btn-success">Find</a>
+				<a id="postcodeBack" class="btn btn-danger">Start Again</a>
+			</div>
+
+			<!-- Container for candidate results from constituency lookup -->
+			<div id="candidateList" class="panel hidden">
+			</div>
+
+			<!-- Thank you message for voting -->
+			<div id="thankyou" class="panel hidden message">
+				<span>Thank you for registering your choice.  Watch the live results for continuing updates.</span>
+			</div>
+
+			<!-- Thank you message for not voting! -->
+			<div id="thankyouNoVote" class="panel hidden message">
+				<span>Please consider voting.. every vote <a href="http://www.ukpolitical.info/Turnout45.htm" target="_blank">counts</a></span>
+				<a id="voteNoBack" class="btn btn-danger">Start Again</a>
+			</div>
+
+		</div>
+
+		<!-- Sidebar to hold charts, activity feed, etc -->
+		<div class="span4">
+
+			<div id="charts" class="panel">
+				<h2>Live Results</h2>
+				<div id="chartNational" class="chart"></div>
+				<div id="chartConstituency" class="chart"></div>
+			</div>
+
+			<div id="activityFeed" class="panel">
+				<h2>Activity Feed</h2>
+			</div>
+
+		</div>
+
+	</div>
+			
+</div>

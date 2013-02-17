@@ -1,14 +1,14 @@
 MyVote::Application.routes.draw do
-  resources :votes
-
-
+  
   resources :candidates
 
 
+  root to: "myvote#index"  
+
+  resources :votes
+
+
   resources :constituencies
-
-
-  get "myvote/index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
