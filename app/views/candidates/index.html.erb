@@ -1,0 +1,29 @@
+<h1>Listing candidates</h1>
+
+<table>
+  <tr>
+    <th>Constituency</th>
+    <th>Candidate</th>
+    <th>Candidate name</th>
+    <th>Party</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @candidates.each do |candidate| %>
+  <tr>
+    <td><%= candidate.constituency_id %></td>
+    <td><%= candidate.candidate_id %></td>
+    <td><%= candidate.candidate_name %></td>
+    <td><%= candidate.party %></td>
+    <td><%= link_to 'Show', candidate %></td>
+    <td><%= link_to 'Edit', edit_candidate_path(candidate) %></td>
+    <td><%= link_to 'Destroy', candidate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Candidate', new_candidate_path %>
