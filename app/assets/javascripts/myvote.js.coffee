@@ -68,8 +68,6 @@ $ ->
 
 
 	$('#postcodeFind').click ->
-		# Show constituency results chart now that postcode is entereed..
-		$('#chartConstituency').removeClass('hidden')
 		# When postcode find button clicked, strip spaces from postcode and upperCase
 		strippedPostCode = $('#postcode').val().toUpperCase().replace /\s+/g, ''
 		# AJAX call to postcode->constituency lookup 
@@ -124,6 +122,5 @@ $ ->
 		$('#candidateList').empty()
 		$('#thankyou').addClass('hidden')								
 		$('#thankyouNoVote').addClass('hidden')
-		$('#chartConstituency').addClass('hidden')
 		# And re-display vote question
 		$('#vote').removeClass('hidden')
