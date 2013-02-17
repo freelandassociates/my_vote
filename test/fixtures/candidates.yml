@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  constituency_id: 1
+  candidate_id: 1
+  candidate_name: MyString
+  party: MyString
+
+two:
+  constituency_id: 1
+  candidate_id: 1
+  candidate_name: MyString
+  party: MyString

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  constituency_id: 1
+  postcode: MyString
+  candidate_id: 1
+
+two:
+  constituency_id: 1
+  postcode: MyString
+  candidate_id: 1
