@@ -2,7 +2,7 @@
 
 Hosted at: link:http://myvote-demo.herokuapp.com
 
-Source code:  link:https://github.com/freelandassociates/my_vote.git  
+Source code:  link:https://freelandassociates/my_vote.git  
 
 I have created the “myVote” demo as a single page application to make the page more responsive and remove the need for page reloads which could interfere with the live video stream.
 
@@ -19,7 +19,7 @@ The application database contains sample constituency and candidate data for 4 p
 
 This is what I would do with more time;
 
-=User Interface
+User Interface
 
 * Refine screen layout to avoid having to scroll down to see full candidate list.
 
@@ -32,7 +32,7 @@ This is what I would do with more time;
 
 * Change colour of bars in the results charts to match party colours.
 
-=Functionality
+Functionality
 
 * Add more questions following a “No” response to establish how likely the user is to vote (1 to 10) and if there are specific factors behind their decision.
 
@@ -48,7 +48,7 @@ This is what I would do with more time;
 
 * Add a real-time “Activity Feed” in the right-hand side bar to show anonymous details of people making candidate selections, e.g. “A user in LN10 has chosen Reg Shore (Liberal Democrat) in the Lincoln constituency.”
 
-=Best Practices
+Best Practices
 
 * Add more robust error checking in CoffeeScript, particularly to handle unexpected responses on the AJAX database calls.
 
