@@ -1,3 +1,68 @@
+==Overview
+
+Hosted at: link:http://myvote-demo.herokuapp.com
+Source code:  link:https://github.com/freelandassociates/my_vote.git  
+
+I have created the “myVote” demo as a single page application to make the page more responsive and remove the need for page reloads which could interfere with the live video stream.
+
+The front end of the application uses the Twitter Bootstrap framework.  This gives a head-start in making the layout responsive for access from mobile devices.
+
+The back end of the application uses Ruby on Rails.  Using Rails enabled me to create RESTful APIs over the main database tables.  It also provides a great dependency framework for including Bootstrap and Highcharts as Ruby gems.  
+
+The majority of the logic of the application was written using CoffeeScript, which is compiled automatically to JavaScript at runtime.  The CoffeeScript code communicates via AJAX with the Rails back end to retrieve the required “Candidate” and “Constituency” data and to register user “Votes”.
+
+The application database contains sample constituency and candidate data for 4 postcodes; LN4 2UN, NG34 7LN, N13 4BS and SW1A 2AA.   The sample video and charts are included to give a representation of the page layout.   The charts are not yet linked to the back-end database tables, so will not update in real-time.
+ 
+
+==Next Steps
+
+This is what I would do with more time;
+
+=User Interface
+
+• Refine screen layout to avoid having to scroll down to see full candidate list.
+
+• Add short fade-in/fade-out on questions and messages to make overall feel smoother.
+
+• Show percentage of Yes/No responses so far alongside the “Yes” and “No” buttons.
+
+
+• Add party logos alongside candidates in the candidate list. 
+
+• Change colour of bars in the results charts to match party colours.
+
+=Functionality
+
+• Add more questions following a “No” response to establish how likely the user is to vote (1 to 10) and if there are specific factors behind their decision.
+
+• Allow searching for a constituency by name as well as by postcode.  
+
+• Use the http://www.theyworkforyou.com/api/docs/getConstituency API to get the constituency associated with a postcode.  Return an error message to the user if no information can be found.
+
+• Add links from the candidate names to their www.theyworkforyou.com and www.parliament.uk details.  Add a link from the constituency name to details on the BBC and Guardian websites.
+
+• Include the candidate and constituency name in the “Thank you” message after a user makes a candidate choice.
+
+• Store details that the user has made a candidate choice in computer’s local storage to warn against making multiple selections.
+
+• Add a real-time “Activity Feed” in the right-hand side bar to show anonymous details of people making candidate selections, e.g. “A user in LN10 has chosen Reg Shore (Liberal Democrat) in the Lincoln constituency.”
+
+=Best Practices
+
+• Add more robust error checking in CoffeeScript, particularly to handle unexpected responses on the AJAX database calls.
+
+• Further normalisation of the database to separate out candidates, parties and constituencies.
+
+• Add analytics to home page and AJAX actions to allow high level tracking of user activities.
+
+• Write tests to maintain quality on subsequent code changes.
+
+• Further testing and tuning of layout to mobile devices.
+
+
+
+
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
