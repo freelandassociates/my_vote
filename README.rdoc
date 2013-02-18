@@ -4,7 +4,7 @@ Hosted at: link:http://myvote-demo.herokuapp.com
 
 I have created the “myVote” demo as a single page application to make the page more responsive and remove the need for page reloads which could interfere with the live video stream.
 
-The front end of the application uses the Twitter Bootstrap framework.  This gives a head-start in making the layout responsive for access from mobile devices.
+The front end of the application uses the Twitter Bootstrap framework, which enables the page to reformat correctly on mobile devices.
 
 The back end of the application uses Ruby on Rails.  Using Rails enabled me to create RESTful APIs over the main database tables.  It also provides a great dependency framework for including Bootstrap and Highcharts as Ruby gems.  
 
@@ -15,7 +15,7 @@ The application database contains sample constituency and candidate data for 4 p
 
 ==Next Steps
 
-This is what I would do with more time;
+With more time I would add the following features;
 
 *User* *Interface*
 
@@ -24,7 +24,6 @@ This is what I would do with more time;
 * Add short fade-in/fade-out on questions and messages to make overall feel smoother.
 
 * Show percentage of Yes/No responses so far alongside the “Yes” and “No” buttons.
-
 
 * Add party logos alongside candidates in the candidate list. 
 
