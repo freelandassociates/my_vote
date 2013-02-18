@@ -2,8 +2,6 @@
 
 Hosted at: link:http://myvote-demo.herokuapp.com
 
-Source code:  link:https://freelandassociates/my_vote.git  
-
 I have created the “myVote” demo as a single page application to make the page more responsive and remove the need for page reloads which could interfere with the live video stream.
 
 The front end of the application uses the Twitter Bootstrap framework.  This gives a head-start in making the layout responsive for access from mobile devices.
